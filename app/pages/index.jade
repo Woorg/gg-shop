@@ -1,6 +1,30 @@
 extends /blocks/layout-default/layout-default
 
+include /blocks/header/header
+include /blocks/footer/footer
+
+include /blocks/categories/categories
+include /blocks/relative/relative
+
+
+
+
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Главная';
 
 block content
+	.page__wrapper
+		+header()
+
+		main.main
+			h1.main__title.title Магазин для настоящих мужчин
+
+
+			+categories()
+			+relative()
+			+relative-second()
+
+	.page__buffer
+
+	+footer()
+

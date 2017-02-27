@@ -1,0 +1,70 @@
+.footer
+	display block
+	background #000000
+	box-shadow 0 -7px 0 rgba(0, 0, 0, 0.63)
+	&__in
+		padding 8px 94px 30px 94px
+		min-height 200px
+		font-size 0
+		+below(1110px)
+			padding-left ratio-percentage(94,1110px)
+			padding-right ratio-percentage(94,1110px)
+	&__col
+		display inline-block
+		vertical-align top
+		margin-right 30px
+		width 22%
+		font-family Helvetica, Arial, sans-serif
+		font-size 20px
+		line-height 1.2
+		color #FFF
+		&:nth-child(4n)
+			margin-right 0
+		+below(1110px)
+			&:nth-child(1)
+				width 100%
+				display block
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				width 30%
+		+below(721px)
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				width 100%
+				margin-right 0
+
+
+	&__logo
+		margin-bottom 14px
+		retinaSprite($logo_big_group)
+		hide-text()
+	&__email,
+	&__address
+		a
+			display block
+			color #FFF
+			text-decoration none
+			&:hover
+				text-decoration underline
+	&__nav,
+	&__address
+		margin-top 39px
+	&__phone
+		margin-bottom 2px
+	&__email
+		color #FFF
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+	// &__list
+
+	&__item
+		margin-bottom 2px
+	&__link
+		color #FFF
+		text-decoration none
+		&:hover
+			text-decoration underline

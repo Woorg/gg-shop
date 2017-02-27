@@ -1,0 +1,148 @@
+.relative
+	margin-bottom 30px
+	display block
+	&__title
+		margin-bottom 0
+		text-align center
+		overflow hidden
+		span
+			position relative
+			left -6px
+			border 3px solid #000000
+			border-width 3px 0 0
+			padding 13px 0 10px
+			display inline-block
+			vertical-align top
+			min-width 250px
+			background-color #feb900
+			color #000000
+			font-family $benderB
+			font-size 25px
+			text-transform uppercase
+			+below(768px)
+				font-size 22px
+			&:after,
+			&:before
+				position absolute
+				top -14px
+				z-index -1
+				content ""
+				width 32px
+				height 85px
+				border 3px solid #000000
+				background-color #feb900
+			&:before
+				left -19px
+				transform rotate(33deg)
+			&:after
+				right -19px
+				transform rotate(-33deg)
+
+	&__list
+		padding-top 33px
+		background #000
+		font-size 0
+	&__item
+		position relative
+		display inline-block
+		vertical-align top
+		width 20%
+		text-align center
+		&:after
+			position absolute
+			top 0
+			right 0
+			content ""
+			width 2px
+			height 180px
+			background #feb900
+		&:last-child
+			&:after
+				display none
+		+below(930px)
+			width 33.3%
+			&:nth-child(3n)
+				&:after
+					display none
+		+below(682px)
+			width 49.5%
+			&:nth-child(2n)
+				&:after
+					display none
+		+below(425px)
+			width 100%
+
+	&__link
+		min-height 300px
+		display block
+		text-decoration none
+		cursor pointer
+	&__img
+		position relative
+		margin-bottom 24px
+		width 100%
+		min-height 180px
+		img
+			position absolute
+			top 0
+			right 0
+			left 0
+			bottom 0
+			margin auto
+			max-width 100%
+			height auto
+	&__item-title
+		margin-left 30px
+		margin-right 25px
+		padding 8px 10px 8px
+		background-color #ffffff
+		color #000000
+		font-family $benderB
+		font-size 18px
+		text-transform uppercase
+
+	&__item-price
+		margin-left 30px
+		margin-right 25px
+		padding 6px 10px 8px
+		background-color #feb900
+		color #000000
+		font-family $benderBlk
+		font-size 18px
+		text-transform uppercase
+	&__link
+		&:hover
+			.relative__item-price
+				background darken(#feb900, 05)
+
+.relative_second
+	margin-bottom 0
+	.relative__title
+		span
+			background #000
+			color #fff
+			&:before,
+			&:after
+				background #000
+	.relative__list
+		border 8px solid #000000
+		padding-top 32px
+		padding-bottom 10px
+		background #FFF
+	.relative__item
+		&:after
+			background #000000
+	.relative__item-title
+		max-height 46px
+		overflow hidden
+		text-align left
+	.relative__item-price
+		position absolute
+		right 0
+		bottom 0
+		left 0
+	.relative__link
+		min-height 260px
+	.relative__img
+		margin-bottom 0
+		min-height 174px

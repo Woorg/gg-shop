@@ -1,0 +1,48 @@
+mixin header()
+	header.header
+		.topline
+			.topline__in
+				.topline__title Сайты для настоящих мужчин
+				nav.topline__nav
+					ul.topline__list
+						li.topline__item.active
+							a.topline__link(href="") gg-shop
+						li.topline__item
+							a.topline__link(href="") gg knife
+						li.topline__item
+							a.topline__link(href="") gg-parts
+						li.topline__item
+							a.topline__link(href="") gg-company
+		.header__body
+			.header__in
+				a.header__logo.logo
+					.logo__text добро пожаловать в gg-shop
+				.header__contacts
+					.header__contacts-text Звоните с 10:00 по 13:00
+					.header__contacts-phone +7 (917) 564-95-93
+					a.header__contacts-button(href="#link") заказать звонок
+				a.header__cart(href="#link")
+					span В корзине
+					span 5 товаров
+
+		.header__bottom
+			.header__in.header__in_second
+				.header__w
+					nav.header__nav.nav
+						ul.nav__list
+							li.nav__item.active
+								a.nav__link(href="#")
+									span главная
+							li.nav__item
+								a.nav__link(href="#")
+									span новости
+							li.nav__item
+								a.nav__link(href="#")
+									span контакты
+
+						button.nav__trigger
+							span Меню
+			.header__search.search
+				form.search__form(action="/" method="get")
+					input.search__input(type="text", value="", placeholder="поиск")
+

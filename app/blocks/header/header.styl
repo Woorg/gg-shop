@@ -1,0 +1,489 @@
+.topline
+	position relative
+	z-index 2
+	background url('../images/general/header-right.png') 100% 100% no-repeat,
+	url('../images/general/header-left.png') 0 100% no-repeat, url('../images/general/header-brdr.jpg') 0 100% repeat-x
+	background-color #000
+	+below(1619px)
+		background #000 url('../images/general/header-brdr.jpg') 0 100% repeat-x
+
+	&__in
+		padding-left 160px
+		@extends .in
+		min-height 52px
+		+below(1398px)
+			padding-left 10px
+	&__title
+		margin-top 8px
+		color #feb900
+		font-family $benderR
+		font-size 30px
+		+below(1126px)
+			margin-top 12px
+			font-size 25px
+		+below(1001px)
+			margin-bottom 10px
+
+		+below(992px)
+			margin-bottom 10px
+	&__title,
+	&__nav
+		display inline-block
+		vertical-align top
+	&__nav
+
+		margin-left 54px
+		+below(1001px)
+			margin-bottom 0
+		+below(943px)
+			margin-bottom 10px
+	&__list
+		font-size 0
+	&__item
+		position relative
+		margin-left -39px
+		display inline-block
+		vertical-align top
+		font-family $benderR
+		text-transform uppercase
+	&__link
+		position relative
+		padding 16px 58px 16px 32px
+		display block
+		font-size 20px
+		color #ffffff
+		text-decoration none
+		white-space nowrap
+		text-shadow 1px 1px 0 rgba(0, 0, 0, 0.5)
+		+below(1001px)
+			font-size 16px
+	&__item
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ""
+			retinaSprite($topline_item_group)
+		&:hover
+			&:after
+				left -1px
+				z-index 1
+				retinaSprite($nav_item_hover_second_group)
+		&.active
+			z-index 1
+			retinaSprite($nav_item_hover_second_group)
+		&:hover
+			.topline__link
+				z-index 2
+
+.header
+	display block
+	+below(1386px)
+		padding-bottom 20px
+		overflow hidden
+	&__body
+		position relative
+		border-bottom 1px solid darken(#664B00,10)
+		z-index 1
+		padding-top 10px
+		padding-bottom 10px
+		background #feb900
+		box-shadow 5px 5px 14px 2px rgba(0, 0, 0, 0.5)
+	&__in
+		position relative
+		min-height 71px
+		text-align center
+		+below(982px)
+			padding-left 10px
+			padding-right 10px
+		+below(604px)
+			min-height 160px
+		+below(486px)
+			min-height 160px
+	&__in_second
+		@extends .in
+	&__logo
+		position relative
+		right -27px
+		display inline-block
+		vertical-align top
+		+below(1088px)
+			right 0
+	&__contacts
+		position absolute
+		top -1px
+		left 38px
+		color #000000
+		font-family $benderB
+		text-align left
+		+below(1088px)
+			position static
+			display inline-block
+			vertical-align top
+			font-size 14px
+		+below(982px)
+			margin auto
+			display block
+			width 200px
+		+below(982px)
+			text-align left
+			margin-right 100%
+			width 200px
+	&__contacts-text
+		margin-bottom 6px
+		font-size 17px
+		+below(972px)
+			font-size 14px
+	&__contacts-phone
+		margin-bottom 3px
+		font-size 23px
+		+below(972px)
+			font-size 14px
+	&__contacts-button
+		padding 3px 9px
+		display block
+		background #9e0b0f
+		color #ffffff
+		font-size 21px
+		text-decoration none
+		text-transform uppercase
+		+below(972px)
+			font-size 14px
+		&:hover
+			background darken(#9e0b0f,10)
+	&__cart
+		position absolute
+		top 11px
+		right 4px
+		padding-left 44px
+		width 180px
+		display block
+		color #000000
+		text-align left
+		font-family $benderB
+		font-size 17px
+		line-height 1.2
+		text-decoration none
+		+below(1088px)
+			width 40px
+		+below(604px)
+			position relative
+			width auto
+			display inline-block
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ""
+			retinaSprite($cart_icon_group)
+		span
+			display block
+			text-decoration underline
+			+below(1088px)
+
+				display none
+		&:hover
+			span
+				text-decoration none
+	&__bottom
+		position relative
+		.header__in
+			position relative
+			margin auto
+			// max-width 1184px
+			width ratio-percentage(1184,1920)
+			min-height 56px
+			background #feb900
+			box-shadow 5px 6px 14px 2px rgba(0, 0, 0, 0.5)
+			+below(1386px)
+				width auto
+				min-height 52px
+			+below(677px)
+				min-height 48px
+			+above(1385px)
+				width ratio-percentage(1190,1920)
+
+			&:before,
+			&:after
+				position absolute
+				content ""
+				top 0
+				width 0
+				height 0
+			&:before
+				left -50px
+				border-style solid
+				border-width 0 50px 57px 0
+				border-color transparent #feba00 transparent transparent
+
+
+			&:after
+				right -49px
+				border-style solid
+				border-width 57px 50px 0 0
+				border-color #feba00 transparent transparent transparent
+			+below(1357px)
+				&:after,
+				&:before
+					display none
+	&__w
+		&:before,
+		&:after
+			position absolute
+			content ""
+			z-index -1
+			width 47px
+			height 57px
+			background #feba00
+			box-shadow 5px 6px 14px 2px rgba(0, 0, 0, 0.5)
+		&:after
+			top -16px
+			right -31px
+			transform rotate(42deg)
+
+		&:before
+			top -23px
+			left -30px
+			height 67px
+			transform rotate(-42deg)
+			box-shadow -8px 6px 14px 2px rgba(0, 0, 0, 0.5)
+		+below(1357px)
+			&:after,
+			&:before
+				display none
+	&__nav
+		margin-left 288px
+		text-align left
+		+below(1606px)
+			margin-left 30px
+		+below(1606px)
+			margin-left 0
+		+below(781px)
+			margin-left 0
+
+	&__search
+		position absolute
+		top -8px
+		right 0
+		z-index 0
+
+.logo
+	position relative
+	margin-top 18px
+	padding-left 104px
+	text-decoration none
+	+below(1088px)
+		display block
+		padding-top 0
+		padding-left 0
+	+below(982px)
+		display block
+		vertical-align top
+		text-align left
+	+below(982px)
+		margin-bottom 10px
+	+below(734px)
+		margin-top 0
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ""
+		retinaSprite($logo_group)
+		margin-top -37px
+		+below(982px)
+			left -117px
+		+below(982px)
+			display none
+	&__text
+		display inline-block
+		vertical-align middle
+		color #000000
+		font-family $benderBlk
+		font-size 40px
+		text-transform uppercase
+		+below(1193px)
+			font-size 33px
+		+below(972px)
+			font-size 27px
+		+below(486px)
+			font-size 22px
+		+below(392px)
+			font-size 18px
+
+.nav
+	position relative
+	clearfix()
+	&__list
+		font-size 0
+		text-align left
+		float left
+		+below(604px)
+			margin-top 50px
+			display none
+	&__list_open
+		float none
+		text-align left
+		+below(604px)
+			display block
+	&__item
+		display inline-block
+		vertical-align top
+		font-family $benderB
+		overflow hidden
+		+below(604px)
+			display block
+	&__link
+		position relative
+		padding 19px 48px 13px 70px
+		display block
+		font-size 25px
+		color #000000
+		text-decoration none
+		text-transform uppercase
+		white-space nowrap
+		+below(775px)
+			font-size 20px
+		+below(677px)
+			font-size 16px
+			padding-left 40px
+			padding-right 40px
+		+below(604px)
+			&:hover
+				text-decoration underline
+		+below(425px)
+			padding-left 0
+			padding-right 0
+		span
+			position relative
+		&:after
+			position absolute
+			top 0
+			left 0px
+			content ""
+			retinaSprite($nav_item_group)
+		+below(604px)
+			&:after
+				display none
+		&:hover
+			&:before
+				position absolute
+				top 0
+				left -1px
+				content ""
+				retinaSprite($nav_item_hover_group)
+			+below(604px)
+				&:before
+					display none
+			span
+				z-index 1
+	&__item
+		&.active
+			.nav__link
+				&:before
+					position absolute
+					top 0
+					left -1px
+					content ""
+					retinaSprite($nav_item_hover_group)
+				+below(604px)
+					&:before
+						display none
+
+		&:last-child
+			position relative
+			&:before
+				position absolute
+				top 0
+				right -3px
+				content ""
+				retinaSprite($nav_item_group)
+			+below(604px)
+				&:before
+					display none
+	&__trigger
+		border none
+		padding-top 8px
+		padding-bottom 8px
+		display none
+		width 100%
+		min-height 48px
+		background none
+		font-family $benderB
+		line-height 34px
+		clearfix()
+		span
+			position absolute
+			top 8px
+			left 50%
+			margin-left -40px
+			padding-left 36px
+			&:after
+				position absolute
+				top 50%
+				left 0
+				content ""
+				margin-top -16px
+				transition background-image .3s ease
+				retinaSprite($menu_icon_group)
+
+		&:hover
+			span
+				&:after
+					opacity 0.8
+		+below(604px)
+			position absolute
+			top 0
+			display block
+
+	&__trigger_active
+		span
+			&:after
+				transition background-image .3s ease
+				retinaSprite($close_icon_group)
+
+.search
+	padding-top 9px
+	width 376px
+
+	height 86px
+	background url('../images/general/search-bg.png') 0 0 no-repeat
+	text-align right
+	+below(1920px)
+		width ratio-percentage(376,1920)
+	+below(1202px)
+		top -8px
+	+below(1080px)
+		position relative
+		top 0px
+		display block
+		width 100%
+		height 72px
+		background #000000
+	&__input
+		border none
+		padding 14px 60px 10px 60px
+		padding-right ratio-percentage(60,376)
+		width 100%
+		height 56px
+		background transparent
+		color #ffffff
+		font-family $benderB
+		font-size 25px
+		text-transform uppercase
+		text-align center
+		+placeholder()
+			color #ffffff
+		+below(1080px)
+			text-align left
+			text-overflow ellipsis
+		+below(682px)
+			font-size 22px
+		+below(425px)
+			padding-left 10px
+			padding-right 10px
+			font-size 18px
+
+
+
+

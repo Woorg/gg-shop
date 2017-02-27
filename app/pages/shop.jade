@@ -1,0 +1,27 @@
+extends /blocks/layout-default/layout-catalog
+
+include /blocks/header/header
+include /blocks/footer/footer
+
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/products/products
+include /blocks/filter/filter
+include /blocks/sidebar/sidebar
+
+block head
+	- var pageTitle = 'Магазин';
+
+block content
+	.page__wrapper
+		+header()
+
+		main.main
+			+breadcrumbs()
+			+products()
+			+filter()
+			+sidebar()
+
+	.page__buffer
+
+	+footer()
+

@@ -1,0 +1,19 @@
+.main
+	@extends .in
+	padding-top 35px
+	padding-bottom 38px
+	display block
+	overflow hidden
+	+below(768px)
+		padding-top 15px
+	&__title
+		position relative
+		right -16px
+		margin-bottom 27px
+		text-align center
+		+below(768px)
+			right 0
+
+.page_catalog
+	.main
+		@extends .in_second
