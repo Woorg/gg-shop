@@ -1,2 +1,88 @@
 .sidebar
+	position absolute
+	top 90px
+	// left -225px
+	left -(ratio-percentage(225,1210))
+	margin-bottom 20px
+	padding-left 10px
+	padding-right 10px
+	width 177px
 	display block
+	+below(1436px)
+		position static
+		top 0
+		width auto
+.sidebar__trigger
+	position relative
+	margin-bottom 20px
+	padding-left 40px
+	font-family $benderB
+	font-size 22px
+	background none
+	border none
+	text-decoration underline
+	&:hover
+		text-decoration none
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ""
+		margin-top -18px
+		retinaSprite($category_icon_group)
+	+above(1436px)
+		display none
+.side-nav
+	+below(1436px)
+		display none
+	&__list
+		font-size 0
+
+	&__item
+		margin-bottom 10px
+		+below(1436px)
+			display inline-block
+			vertical-align top
+			width 25%
+		+below(620px)
+			width 49%
+		+below(425px)
+			width 100%
+	&__link
+		position relative
+		padding-left 16px
+		display block
+		color #000
+		font-family $benderB
+		font-size 25px
+		line-height 40px
+		text-decoration none
+		cursor pointer
+		+below(1436px)
+			font-size 22px
+		&:before
+			position absolute
+			top 50%
+			left 0
+			content ""
+			margin-top -6px
+			retinaSprite($arrow_group)
+	&__link_active
+		&:before
+			retinaSprite($arrow_down_group)
+	&__sub
+		margin-bottom 20px
+		padding-left 32px
+		display none
+	&__sub_active
+		display block
+	&__sub-item
+		margin-bottom 0
+	&__sub-link
+		color #000000
+		font-family $benderR
+		font-size 20px
+		line-height 35px
+		text-decoration underline
+		&:hover
+			text-decoration none

@@ -1,8 +1,7 @@
 .topline
 	position relative
 	z-index 2
-	background url('../images/general/header-right.png') 100% 100% no-repeat,
-	url('../images/general/header-left.png') 0 100% no-repeat, url('../images/general/header-brdr.jpg') 0 100% repeat-x
+	background url('../images/general/header-right.png') 100% 100% no-repeat, url('../images/general/header-left.png') 0 100% no-repeat, url('../images/general/header-brdr.jpg') 0 100% repeat-x
 	background-color #000
 	+below(1619px)
 		background #000 url('../images/general/header-brdr.jpg') 0 100% repeat-x
@@ -189,25 +188,29 @@
 		position relative
 		.header__in
 			position relative
-			margin auto
+			margin 0
+			margin-left ratio-percentage(366,1920)
 			// max-width 1184px
+			max-width 100%
 			width ratio-percentage(1184,1920)
-			min-height 56px
+			width 100%
+			min-height 53px
 			background #feb900
 			box-shadow 5px 6px 14px 2px rgba(0, 0, 0, 0.5)
 			+below(1386px)
 				width auto
 				min-height 52px
+				margin-left 0
 			+below(677px)
-				min-height 48px
-			+above(1385px)
-				width ratio-percentage(1190,1920)
+				min-height 44px
+			// +above(1385px)
+			// 	width ratio-percentage(1190,1920)
 
 			&:before,
 			&:after
 				position absolute
 				content ""
-				top 0
+				top -3px
 				width 0
 				height 0
 			&:before
@@ -217,11 +220,11 @@
 				border-color transparent #feba00 transparent transparent
 
 
-			&:after
-				right -49px
-				border-style solid
-				border-width 57px 50px 0 0
-				border-color #feba00 transparent transparent transparent
+			// &:after
+			// 	right -49px
+			// 	border-style solid
+			// 	border-width 57px 50px 0 0
+			// 	border-color #feba00 transparent transparent transparent
 			+below(1357px)
 				&:after,
 				&:before
@@ -235,11 +238,13 @@
 			width 47px
 			height 57px
 			background #feba00
-			box-shadow 5px 6px 14px 2px rgba(0, 0, 0, 0.5)
+			// box-shadow 5px 6px 14px 2px rgba(0, 0, 0, 0.5)
+		// &:after
+		// 	top -16px
+		// 	right -31px
+		// 	transform rotate(42deg)
 		&:after
-			top -16px
-			right -31px
-			transform rotate(42deg)
+			display none
 
 		&:before
 			top -23px
@@ -254,6 +259,7 @@
 	&__nav
 		margin-left 288px
 		text-align left
+
 		+below(1606px)
 			margin-left 30px
 		+below(1606px)
@@ -263,7 +269,7 @@
 
 	&__search
 		position absolute
-		top -8px
+		top -9px
 		right 0
 		z-index 0
 
@@ -335,7 +341,7 @@
 			display block
 	&__link
 		position relative
-		padding 19px 48px 13px 70px
+		padding 17px 48px 11px 70px
 		display block
 		font-size 25px
 		color #000000
@@ -444,13 +450,12 @@
 
 .search
 	padding-top 9px
-	width 376px
-
+	width 430px
 	height 86px
 	background url('../images/general/search-bg.png') 0 0 no-repeat
 	text-align right
 	+below(1920px)
-		width ratio-percentage(376,1920)
+		width ratio-percentage(430,1920)
 	+below(1202px)
 		top -8px
 	+below(1080px)

@@ -1,2 +1,123 @@
 .filter
+	position absolute
+	top 107px
+	right -185px
+	right -(ratio-percentage(185,1210))
+	margin-bottom 10px
+	padding-left 10px
+	padding-right 10px
+	width 177px
 	display block
+	font-family $benderR
+	+below(1436px)
+		position static
+		width auto
+		display inline-block
+		vertical-align top
+	&__trigger
+		position relative
+		margin-bottom 20px
+		padding-left 40px
+		font-family $benderB
+		font-size 22px
+		background none
+		border none
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ""
+			margin-top -18px
+			retinaSprite($filter_icon_group)
+		+above(1436px)
+			display none
+	&__form
+		+below(1436px)
+			display none
+	&__row
+		margin-bottom 18px
+		+below(1436px)
+			display inline-block
+			vertical-align top
+			width 32%
+		+below(620px)
+			width 100%
+	&__title
+		margin-bottom 10px
+		line-height 30px
+		color #000000
+		font-size 20px
+		+below(1436px)
+			font-family $benderB
+	// &__list
+	&__item
+		margin-bottom 13px
+		+below(1436px)
+			display inline-block
+			vertical-align top
+			width 49%
+		+below(620px)
+			display block
+			width auto
+	&__link
+		color #0c3bb1
+		font-size 15px
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__form-row
+		margin-bottom 10px
+		// +below(1436px)
+		// 	width 49%
+
+	// &__form-label
+
+	&__form-input
+		padding 3px 3px 3px
+		width 137px
+		height 22px
+		border 1px solid #000000
+		font-size 15px
+		+placeholder()
+			color #000000
+	&__form-checkbox
+		margin-bottom 5px
+		input
+			display none
+		label
+			position relative
+			padding-left 26px
+			display block
+			color #000000
+			font-size 15px
+			line-height 1.2
+			cursor pointer
+			&:after,
+			&:before
+				position absolute
+				top 50%
+				left 0
+				content ""
+				margin-top -9px
+			&:after
+				width 14px
+				height 14px
+				border 1px solid #402f00
+				background-color #ffffff
+			&:before
+				left 3px
+				z-index 1
+				margin-top -6px
+				width 8px
+				height 8px
+				display none
+				border 1px solid #402f00
+				background-color #000000
+		input:checked
+			&~label
+				&:before
+					display block
+

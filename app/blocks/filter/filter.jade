@@ -1,3 +1,45 @@
 mixin filter()
-	+b.filter&attributes(attributes)
-		block
+	aside.filter
+		button.filter__trigger Фильтр
+		form.filter__form(action="", method="get")
+			.filter__row
+				.filter__title Сортировать:
+				ul.filter__list
+					li.filter__item
+						a.filter__link(href="#link") по цене
+					li.filter__item
+						a.filter__link(href="#link") названию
+					li.filter__item
+						a.filter__link(href="#link") по популярности
+					li.filter__item
+						a.filter__link(href="#link") по отзывам
+					li.filter__item
+						a.filter__link(href="#link") по новизне
+			.filter__row
+				.filter__title Цена:
+				.filter__form-row
+					label.filter__form-label
+						input.filter__form-input(type="text", value="", placeholder="от")
+				.filter__form-row
+					label.filter__form-label
+						input.filter__form-input(type="text", value="", placeholder="до")
+			.filter__row
+				.filter__title Производитель
+				.filter__form-row
+					.filter__form-checkbox
+						input(id='check-1' type="checkbox" value='Инфратех')
+						label(for='check-1') Инфратех
+				.filter__form-row
+					.filter__form-checkbox
+						input(id='check-2' type="checkbox" value='Вася Пупкин')
+						label(for='check-2') Вася Пупкин
+
+				.filter__form-row
+					.filter__form-checkbox
+						input(id='check-3' type="checkbox" value='Федя Дюпкин')
+						label(for='check-3') Федя Дюпкин
+
+				.filter__form-row
+					.filter__form-checkbox
+						input(id='check-4' type="checkbox" value='Фрося Лупкин')
+						label(for='check-4') Фрося Лупкин

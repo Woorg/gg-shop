@@ -3,7 +3,7 @@
 	padding-top 35px
 	padding-bottom 38px
 	display block
-	overflow hidden
+	// overflow hidden
 	+below(768px)
 		padding-top 15px
 	&__title
@@ -16,4 +16,9 @@
 
 .page_catalog
 	.main
+		position relative
 		@extends .in_second
+		padding-bottom 180px
+		+below(1700px)
+			max-width 1100px
+

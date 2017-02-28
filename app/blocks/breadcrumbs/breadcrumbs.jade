@@ -2,9 +2,10 @@ mixin breadcrumbs()
 	.breadcrumbs
 		span(xmlns:v="http://rdf.data-vocabulary.org/#")
 			span(typeof="v:Breadcrumb")
-				a(href="http://bbrestoran.local/", rel="v:url", property="v:title") Главная страница
+				a(href="http://bbrestoran.local/", rel="v:url", property="v:title") Главная
 				|  -
 			span(rel="v:child", typeof="v:Breadcrumb")
-				a(href="http://bbrestoran.local/shop/", rel="v:url", property="v:title") Товары
+				a(href="http://bbrestoran.local/shop/", rel="v:url", property="v:title") Охота
 				|  -
-			span.breadcrumb_last Блюда из баранины
+			span.breadcrumb_last
+				a(href="http://bbrestoran.local/shop/", rel="v:url", property="v:title") Прицелы
