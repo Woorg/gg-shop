@@ -2,10 +2,45 @@ mixin breadcrumbs()
 	.breadcrumbs
 		span(xmlns:v="http://rdf.data-vocabulary.org/#")
 			span(typeof="v:Breadcrumb")
-				a(href="http://bbrestoran.local/", rel="v:url", property="v:title") Главная
+				a(href="/", rel="v:url", property="v:title") Главная
 				|  -
 			span(rel="v:child", typeof="v:Breadcrumb")
-				a(href="http://bbrestoran.local/shop/", rel="v:url", property="v:title") Охота
+				a(href="/", rel="v:url", property="v:title") Охота
 				|  -
 			span.breadcrumb_last
-				a(href="http://bbrestoran.local/shop/", rel="v:url", property="v:title") Прицелы
+				a(href="/", rel="v:url", property="v:title") Прицелы
+
+
+mixin breadcrumbs-category()
+	.breadcrumbs
+		span(xmlns:v="http://rdf.data-vocabulary.org/#")
+			span(typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Главная
+				|  -
+			span(rel="v:child", typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Охота
+
+mixin breadcrumbs-product-card()
+	.breadcrumbs
+		span(xmlns:v="http://rdf.data-vocabulary.org/#")
+			span(typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Главная
+				|  -
+			span(rel="v:child", typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Охота
+				|  -
+			span(rel="v:child", typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Прицелы
+				|  -
+			span.breadcrumb_last
+				a(href="/", rel="v:url", property="v:title") Прицел ИТ- 610 v 2.0
+
+
+mixin breadcrumbs-news()
+	.breadcrumbs
+		span(xmlns:v="http://rdf.data-vocabulary.org/#")
+			span(typeof="v:Breadcrumb")
+				a(href="/", rel="v:url", property="v:title") Главная
+				|  -
+			span.breadcrumb_last
+				a(href="/", rel="v:url", property="v:title") Новости

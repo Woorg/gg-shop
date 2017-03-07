@@ -1,13 +1,11 @@
 import svg4everybody from 'svg4everybody';
+import 'jquery.maskedinput/src/jquery.maskedinput';
 // import $ from 'jquery';
 
 
 (function () {
 
 	jQuery(function ($) {
-
-
-
 		svg4everybody();
 
 		// menu
@@ -52,16 +50,48 @@ import svg4everybody from 'svg4everybody';
 		});
 
 		$(window).resize(function () {
-			let viewWidth = $(window).width();
+			const viewWidth = $(window).width();
 			if (viewWidth > 1436) {
 				$filterTrigger.next().show();
 				$sidebarTrigger.next().show();
 			}
 		});
 
+		// filter input mask
+
+		const $filterInput = $('.filter__form-input');
+		$filterInput.mask('?9999999');
+
+		// slider
+		$('.card__list').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			fade: true,
+			asNavFor: '.card__thumbs'
+		});
+		$('.card__thumbs').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.card__list',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						arrows: false
+					}
+				}
+			]
+		});
+
+
+
 	});
 
 
+
 })();
-
-

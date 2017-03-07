@@ -1,0 +1,25 @@
+extends /blocks/layout-default/layout-catalog
+
+include /blocks/header/header
+include /blocks/footer/footer
+
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/products/products
+include /blocks/sidebar/sidebar
+
+block head
+	- var pageTitle = 'Категория';
+
+block content
+	.page__wrapper
+		+header()
+
+		main.main
+			+breadcrumbs-category()
+			+sidebar()
+			+products-category()
+
+	.page__buffer
+
+	+footer()
+

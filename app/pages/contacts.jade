@@ -1,0 +1,49 @@
+extends /blocks/layout-default/layout-contacts
+
+include /blocks/header/header
+include /blocks/footer/footer
+
+include /blocks/map/map
+
+
+
+
+block head
+	- var pageTitle = 'Контакты';
+
+block content
+	.page__wrapper
+		+header()
+
+		main.main
+			.main__w
+				.address
+					p Адрес: Петрозаводская 12a
+					p Телефон: <a href='79175649593'>+7 (917) 564-95-93</a>
+					p Почта: <a href='mailto:mail@gg-shop.ru'>mail@gg-shop.ru</a>
+				ul.social
+					li.social__item.social__item_fb
+						a.social__link(href="#link") Фейсбук
+					li.social__item.social__item_vk
+						a.social__link(href="#link") Вконтакте
+					li.social__item.social__item_youtube
+						a.social__link(href="#link") Youtube
+				.contacts-form
+					form(action="/", method="post")
+						.contacts-form.contacts-form_col
+							.contacts-form__field
+								input.contacts-form__input(type="text", value="", placeholder="Ваше имя", name="")
+							.contacts-form__field
+								input.contacts-form__input(type="text", value="", placeholder="Ваша почта", name="")
+							.contacts-form__field
+								input.contacts-form__input(type="text", value="", placeholder="Ваш телефон", name="")
+						.contacts-form.contacts-form_col
+							.contacts-form__field
+								textarea.contacts-form__textarea(value="", placeholder="Сообщение", name="")
+							.contacts-form__field
+								input.contacts-form__submit(type="submit", value="Отправить")
+		+map()
+	.page__buffer
+
+	+footer()
+

@@ -1,0 +1,221 @@
+.card
+	display block
+	&__title
+		color #000000
+		font-family $benderB
+		font-size 37px
+		line-height 1.2
+		+below(768px)
+			font-size 30px
+	&__w
+		margin-bottom 30px
+		clearfix()
+	&__left
+		width 632px
+		width ratio-percentage(632, 1344)
+		float left
+		+below(1024px)
+			width auto
+			float none
+	&__right
+		padding-top 9px
+		width 670px
+		width ratio-percentage(670, 1344)
+		float right
+		+below(1024px)
+			width auto
+			float none
+	&__slider
+		position relative
+		margin-bottom 34px
+		overflow hidden
+	&__list
+		margin-bottom 20px
+	// 	// width 622px
+	// 	width 100%
+	// &__item
+
+	&__link
+		display block
+		text-align center
+		img
+			max-width 100%
+			height auto
+
+	// &__thumbs
+
+	&__thumbs-item
+		margin-right 3px
+		width 20%
+		border 2px solid #000000
+		&.slick-current
+			border 2px solid #feb900
+	&__thumbs-link
+		position relative
+		display block
+		margin auto
+		min-height 106px
+		text-align center
+		img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			display block
+			max-width 100%
+			height auto
+	.slick-arrow
+		z-index 1
+		&:before
+			display none
+
+	.slick-prev,
+	.slick-prev:hover
+		left 0
+		retinaSprite($slider_back_group)
+	.slick-next,
+	.slick-next:hover
+		right 0
+		retinaSprite($slider_next_group)
+
+	&__desc
+		font-family Arial
+		font-weight 700
+		font-size 20px
+		+below(768px)
+			font-size 16px
+		h2
+			font-size 25px
+			+below(768px)
+				font-size 22px
+		p
+			margin-bottom 10px
+			font-weight normal
+			line-height 1.2
+
+	&__button
+		border 4px solid #000000
+		margin-bottom 30px
+		padding 10px 39px 8px
+		display inline-block
+		vertical-align top
+		background-color #feb900
+		color #000000
+		font-family $benderB
+		font-size 40px
+		text-transform uppercase
+		&:hover
+			background lighten(#feb900, 10)
+		+below(1024px)
+			width 100%
+			font-size 33px
+	&__specs
+		color #000000
+		font-family Arial
+		font-size 21px
+		+below(768px)
+			font-size 15px
+	&__specs-title
+		margin-bottom 30px
+		font-size 34px
+		font-weight 700
+		+below(768px)
+			font-size 28px
+	&__specs-row
+		margin-bottom 30px
+	&__specs-row-title
+		margin-bottom 3px
+		font-size 30px
+		+below(768px)
+			font-size 25px
+	// &__specs-list
+
+	&__specs-item
+		border-bottom 2px dotted #000
+		margin-bottom 8px
+		clearfix()
+	&__specs-item-term
+		position relative
+		padding-left 14px
+		float left
+		&:before
+			position absolute
+			top 50%
+			left 0
+			content '-'
+			height 1px
+			margin-top -12px
+	&__specs-item-def
+		float right
+	&__specs-item-term,
+	&__specs-item-def
+		margin-bottom -2px
+		background #fff
+		display block
+		line-height 1
+	&__adv
+		margin-bottom 40px
+	&__adv-title
+		text-align center
+		overflow hidden
+		span
+			position relative
+			left -6px
+			border 3px solid #000000
+			border-width 3px 0 0
+			padding 7px 20px 8px
+			display inline-block
+			vertical-align top
+			// min-width 250px
+			background-color #000000
+			color #fff
+			font-size 22px
+			font-family $benderB
+			text-transform uppercase
+			&:after,
+			&:before
+				position absolute
+				top -14px
+				z-index -1
+				content ""
+				width 32px
+				height 85px
+				border 3px solid #000000
+				background-color #000000
+			&:before
+				left -19px
+				transform rotate(33deg)
+			&:after
+				right -19px
+				transform rotate(-33deg)
+
+	&__adv-list
+		font-size 0
+		clearfix()
+	&__adv-item
+		border 2px solid #000000
+		margin-left -2px
+		margin-bottom -2px
+		padding-top 10px
+		padding-right 30px
+		padding-bottom 6px
+		padding-left 30px
+		width 300px
+		width ratio-percentage(300,1344)
+		min-height 60px
+		display table
+		float left
+		background-color #feb900
+		color #000000
+		font-family $benderR
+		font-size 20px
+		text-align center
+		+below(1920px)
+			width 33.3%
+		+below(1024px)
+			width 50%
+		+below(768px)
+			width 100%
+		span
+			display table-cell
+			vertical-align middle

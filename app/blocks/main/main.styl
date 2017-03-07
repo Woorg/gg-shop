@@ -13,6 +13,8 @@
 		text-align center
 		+below(768px)
 			right 0
+	&__w
+		clearfix()
 
 .page_catalog
 	.main
@@ -22,3 +24,24 @@
 		+below(1700px)
 			max-width 1100px
 
+.page_card
+	.main
+		position relative
+		@extends .in_second
+		padding-left 10px
+		padding-right 10px
+		padding-bottom 180px
+		max-width 1344px
+		+below(1700px)
+			max-width 1100px
+
+
+.page_contacts
+	.main
+		position relative
+		@extends .in_second
+		padding-left 10px
+		padding-right 10px
+		max-width 1344px
+		+below(1700px)
+			max-width 1100px

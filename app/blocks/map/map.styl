@@ -1,0 +1,26 @@
+.map
+	position relative
+	margin-bottom 44px
+	padding-bottom 33.541667%
+	display block
+	height 0
+	overflow hidden
+	&:before,
+	&:after
+		position absolute
+		content ""
+		width 100%
+		min-height 24px
+		z-index 1
+	&:before
+		bottom 0
+		box-shadow inset 0 -8px 14px 0 rgba(0, 0, 0, 0.5)
+	&:after
+		top 0
+		box-shadow inset 0 8px 14px 0 rgba(0, 0, 0, 0.5)
+	&__object
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%

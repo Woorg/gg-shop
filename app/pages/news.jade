@@ -1,0 +1,43 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/footer/footer
+
+include /blocks/breadcrumbs/breadcrumbs
+
+
+block head
+	- var pageTitle = 'Новости';
+
+block content
+	.page__wrapper
+		+header()
+
+		main.main
+			+breadcrumbs()
+
+			.news
+				h1.news__title новости
+
+				.news__items
+					article.news__item
+						p.news__text В продажу поступила
+							a(href="#link") хнерь номер 4
+						.news__date 10.09.1995
+					article.news__item
+						p.news__text В продажу поступила
+							a(href="#link") хнерь номер 3
+						.news__date 10.09.1995
+					article.news__item
+						p.news__text В продажу поступила
+							a(href="#link") хнерь номер 2
+						.news__date 10.09.1995
+					article.news__item
+						p.news__text В продажу поступила
+							a(href="#link") хнерь номер 1
+						.news__date 10.09.1995
+
+	.page__buffer
+
+	+footer()
+
